@@ -1,0 +1,69 @@
+@import "modules/reset";
+@import "modules/variables";
+@import "modules/grid";
+@import "modules/layout";
+@import "modules/utilities";
+
+.rfb-hide-homepage-left-col {
+  #leftCol {
+    @media (max-width: 1280px) {
+      width: 0 !important;
+    }
+    > * {
+      display: none !important;
+    }
+  }
+}
+
+.rfb-hide-homepage-right-col {
+  #rightCol {
+    width: 0 !important;
+    > * {
+      display: none !important;
+    }
+  }
+  #contentArea {
+    right: 0 !important;
+  }
+}
+
+.rfb-expand-content-container {
+  #contentArea {
+    width: 100% !important;
+  }
+
+  // single image in post
+  .uiScaledImageContainer.fbStoryAttachmentImage {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  [rel="theater"] {
+    width: 100% !important;
+  }
+  .uiScaledImageContainer {
+    &,
+    & > img {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  .mtm > [id^="u_fetchstream_"],
+  .mtm > [id^="u_ps_"] {
+    max-width: none !important;
+  }
+
+  .mtm > * {
+    width: auto !important;
+  }
+
+  // video in post
+  ._5v-_,
+  ._5mly {
+    width: 100%;
+  }
+  ._53j5 {
+    width: auto !important;
+  }
+}
